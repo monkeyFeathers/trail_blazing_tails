@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dog_id: 
+  runner_id: 
+  run_date: 2014-01-26 20:02:00
+  duration: MyString
+  map_url: MyString
+  page: MyString
+  value: MyString
+  account_id: 
+
+two:
+  dog_id: 
+  runner_id: 
+  run_date: 2014-01-26 20:02:00
+  duration: MyString
+  map_url: MyString
+  page: MyString
+  value: MyString
+  account_id: 

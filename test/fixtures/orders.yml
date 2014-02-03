@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account_id: 
+  dog_id: 
+  quantity: 1
+  discount: 1.5
+  ammount: 1.5
+  color: MyString
+
+two:
+  account_id: 
+  dog_id: 
+  quantity: 1
+  discount: 1.5
+  ammount: 1.5
+  color: MyString

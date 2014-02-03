@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dog:</strong>
+  <%= @run.dog %>
+</p>
+
+<p>
+  <strong>Runner:</strong>
+  <%= @run.runner %>
+</p>
+
+<p>
+  <strong>Run date:</strong>
+  <%= @run.run_date %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @run.duration %>
+</p>
+
+<p>
+  <strong>Map url:</strong>
+  <%= @run.map_url %>
+</p>
+
+<p>
+  <strong>Page:</strong>
+  <%= @run.page %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @run.value %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @run.account %>
+</p>
+
+<%= link_to 'Edit', edit_run_path(@run) %> |
+<%= link_to 'Back', runs_path %>

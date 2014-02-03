@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @order.account %>
+</p>
+
+<p>
+  <strong>Dog:</strong>
+  <%= @order.dog %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @order.quantity %>
+</p>
+
+<p>
+  <strong>Discount:</strong>
+  <%= @order.discount %>
+</p>
+
+<p>
+  <strong>Ammount:</strong>
+  <%= @order.ammount %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @order.color %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

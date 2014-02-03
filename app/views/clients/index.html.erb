@@ -1,0 +1,45 @@
+<h1>Listing clients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Street</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip code</th>
+      <th>Phone number</th>
+      <th>Second phone</th>
+      <th>Notes</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clients.each do |client| %>
+      <tr>
+        <td><%= client.first_name %></td>
+        <td><%= client.last_name %></td>
+        <td><%= client.email %></td>
+        <td><%= client.street %></td>
+        <td><%= client.city %></td>
+        <td><%= client.state %></td>
+        <td><%= client.zip_code %></td>
+        <td><%= client.phone_number %></td>
+        <td><%= client.second_phone %></td>
+        <td><%= client.notes %></td>
+        <td><%= link_to 'Show', client %></td>
+        <td><%= link_to 'Edit', edit_client_path(client) %></td>
+        <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fake client', new_client_path %>

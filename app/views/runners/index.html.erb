@@ -1,0 +1,41 @@
+<h1>Listing runners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Territory</th>
+      <th>Run pay rate</th>
+      <th>Email</th>
+      <th>Phone number</th>
+      <th>Address</th>
+      <th>Start date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @runners.each do |runner| %>
+      <tr>
+        <td><%= runner.first_name %></td>
+        <td><%= runner.last_name %></td>
+        <td><%= runner.territory %></td>
+        <td><%= runner.run_pay_rate %></td>
+        <td><%= runner.email %></td>
+        <td><%= runner.phone_number %></td>
+        <td><%= runner.address %></td>
+        <td><%= runner.start_date %></td>
+        <td><%= link_to 'Show', runner %></td>
+        <td><%= link_to 'Edit', edit_runner_path(runner) %></td>
+        <td><%= link_to 'Destroy', runner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New runner', new_runner_path %>

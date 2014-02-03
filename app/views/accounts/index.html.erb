@@ -1,0 +1,37 @@
+<h1>Listing accounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Territory</th>
+      <th>Vet</th>
+      <th>Active</th>
+      <th>Emergency vet</th>
+      <th>Gold run credits</th>
+      <th>Silver run credits</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accounts.each do |account| %>
+      <tr>
+        <td><%= account.territory %></td>
+        <td><%= account.vet %></td>
+        <td><%= account.active %></td>
+        <td><%= account.emergency_vet %></td>
+        <td><%= account.gold_run_credits %></td>
+        <td><%= account.silver_run_credits %></td>
+        <td><%= link_to 'Show', account %></td>
+        <td><%= link_to 'Edit', edit_account_path(account) %></td>
+        <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fake account', new_account_path %>

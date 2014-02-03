@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @runner.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @runner.last_name %>
+</p>
+
+<p>
+  <strong>Territory:</strong>
+  <%= @runner.territory %>
+</p>
+
+<p>
+  <strong>Run pay rate:</strong>
+  <%= @runner.run_pay_rate %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @runner.email %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @runner.phone_number %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @runner.address %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @runner.start_date %>
+</p>
+
+<%= link_to 'Edit', edit_runner_path(@runner) %> |
+<%= link_to 'Back', runners_path %>

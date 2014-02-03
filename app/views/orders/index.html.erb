@@ -1,0 +1,37 @@
+<h1>Listing orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Account</th>
+      <th>Dog</th>
+      <th>Quantity</th>
+      <th>Discount</th>
+      <th>Ammount</th>
+      <th>Color</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.account %></td>
+        <td><%= order.dog %></td>
+        <td><%= order.quantity %></td>
+        <td><%= order.discount %></td>
+        <td><%= order.ammount %></td>
+        <td><%= order.color %></td>
+        <td><%= link_to 'Show', order %></td>
+        <td><%= link_to 'Edit', edit_order_path(order) %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fake order', new_order_path %>

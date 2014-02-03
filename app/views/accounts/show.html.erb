@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Territory:</strong>
+  <%= @account.territory %>
+</p>
+
+<p>
+  <strong>Vet:</strong>
+  <%= @account.vet %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @account.active %>
+</p>
+
+<p>
+  <strong>Emergency vet:</strong>
+  <%= @account.emergency_vet %>
+</p>
+
+<p>
+  <strong>Gold run credits:</strong>
+  <%= @account.gold_run_credits %>
+</p>
+
+<p>
+  <strong>Silver run credits:</strong>
+  <%= @account.silver_run_credits %>
+</p>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>

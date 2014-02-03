@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  territory: MyString
+  vet: MyString
+  active: false
+  emergency_vet: MyString
+  gold_run_credits: 1
+  silver_run_credits: 1
+
+two:
+  territory: MyString
+  vet: MyString
+  active: false
+  emergency_vet: MyString
+  gold_run_credits: 1
+  silver_run_credits: 1
