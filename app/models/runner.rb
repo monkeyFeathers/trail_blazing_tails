@@ -1,6 +1,4 @@
-class Runner < ActiveRecord::Base
-
-	has_secure_password
+class Runner < User
 
 	has_many :runs
 	

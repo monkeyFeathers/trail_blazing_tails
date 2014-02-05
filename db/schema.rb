@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140128191011) do
+ActiveRecord::Schema.define(version: 20140203212531) do
 
   create_table "accounts", force: true do |t|
     t.datetime "created_at"
@@ -87,20 +87,6 @@ ActiveRecord::Schema.define(version: 20140128191011) do
     t.datetime "updated_at"
   end
 
-  create_table "runners", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "territory"
-    t.float    "run_pay_rate"
-    t.string   "email"
-    t.string   "phone_number"
-    t.string   "address"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "start_date"
-    t.string   "password_digest"
-  end
-
   create_table "runs", force: true do |t|
     t.integer  "dog_id"
     t.integer  "runner_id"
@@ -119,5 +105,20 @@ ActiveRecord::Schema.define(version: 20140128191011) do
   add_index "runs", ["account_id"], name: "index_runs_on_account_id"
   add_index "runs", ["dog_id", "runner_id"], name: "index_runs_on_dog_id_and_runner_id"
   add_index "runs", ["pay_period_id"], name: "index_runs_on_pay_period_id"
+
+  create_table "users", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "territory"
+    t.float    "run_pay_rate"
+    t.string   "email"
+    t.string   "phone_number"
+    t.string   "address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "start_date"
+    t.string   "password_digest"
+    t.string   "type"
+  end
 
 end
