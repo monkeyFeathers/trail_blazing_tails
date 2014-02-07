@@ -9,6 +9,8 @@ TrailBlazingTails::Application.routes.draw do
   
   get "access/login"
   
+  get "access/runner_index"
+
   resources :orders
 
   resources :pay_periods

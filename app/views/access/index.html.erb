@@ -2,10 +2,9 @@
 
 <div class="menu">
 	<h2>Admin Menu</h2>
-	<div class="identity">Logged in as:</div>
+	<div class="identity">Logged in as: <%= @user.first_name %> <%= @user.last_name %></div>
 	<ul>
-		<li><%= link_to('Manage Los Angeles Accounts', :controller => 'accounts') %></li>
-		<li><%= link_to('Manage Portland Accounts', :controller => 'accounts') %></li>
+		<li><%= link_to('Manage Accounts', :controller => 'accounts') %></li>
 		<li><%= link_to('Manage Runners', :controller => 'runners') %></li>
 		<li><%= link_to('Manage Admin Users', '#') %></li>
 		<li><%= link_to('Logout', :action => 'logout') %></li>

@@ -15,16 +15,26 @@ class RunsController < ApplicationController
   # GET /runs/new
   def new
     @run = Run.new
+    @runner = Runner.find(session[:user_id])
   end
 
   # GET /runs/1/edit
   def edit
+    @runner = Runner.find(Run.find(params[:id]).runner_id)
   end
 
   # POST /runs
   # POST /runs.json
   def create
     @run = Run.new(run_params)
+
+    dog = Dog.find(@run.dog_id)
+
+    if dog.additional_dog?
+      @run.value = "silver"
+    else
+      @run.value = "gold"
+    end
 
     respond_to do |format|
       if @run.save
