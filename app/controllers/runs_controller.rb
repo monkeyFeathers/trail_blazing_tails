@@ -1,15 +1,24 @@
 class RunsController < ApplicationController
+  before_action :confirm_logged_in
   before_action :set_run, only: [:show, :edit, :update, :destroy]
 
   # GET /runs
   # GET /runs.json
   def index
-    @runs = Run.all
+    @runs = case session[:user_type]
+    when "Runner" then Run.where(runner_id: session[:user_id])
+    when "Admin" then Run.all
+    end
   end
 
   # GET /runs/1
   # GET /runs/1.json
   def show
+  end
+
+  def runs_for_runner
+    @runs = Run.where(id: session[user_id]).order('created_at DESC')
+    render action: index
   end
 
   # GET /runs/new

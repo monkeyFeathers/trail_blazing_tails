@@ -5,7 +5,7 @@
 	<div class="identity">Logged in as: <%= @runner.first_name %> <%= @runner.last_name %></div>
 	<ul>
 		<li><%= link_to('Log a run', :controller => 'runs', :action => 'new') %></li>
-		<li><%= link_to('edit profile', '#') %></li>
+		<li><%= link_to 'View my runs', runs_path %>
 		<li><%= link_to('Logout', :action => 'logout') %></li>
 	</ul>
 </div>

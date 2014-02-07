@@ -2,12 +2,12 @@
 
 <p>
   <strong>Dog:</strong>
-  <%= @run.dog %>
+  <%= @run.dog.name %>
 </p>
 
 <p>
   <strong>Runner:</strong>
-  <%= @run.runner %>
+  <%= @run.runner.first_name %> <%= @run.runner.last_name %>
 </p>
 
 <p>
@@ -41,4 +41,4 @@
 </p>
 
 <%= link_to 'Edit', edit_run_path(@run) %> |
-<%= link_to 'Back', runs_path %>
+<%= link_to 'Back', {action: "index" } %>

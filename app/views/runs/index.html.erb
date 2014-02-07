@@ -20,8 +20,8 @@
   <tbody>
     <% @runs.each do |run| %>
       <tr>
-        <td><%= run.dog %></td>
-        <td><%= run.runner %></td>
+        <td><%= run.dog.name %></td>
+        <td><%= run.runner.first_name %> <%= run.runner.last_name %></td>
         <td><%= run.run_date %></td>
         <td><%= run.duration %></td>
         <td><%= run.map_url %></td>
@@ -38,4 +38,4 @@
 
 <br>
 
-<%= link_to 'New run', new_run_path %>
+<%= link_to 'Log a run', new_run_path %> | <%= link_to 'Back to main menu', {controller: :access, action: :index} %>

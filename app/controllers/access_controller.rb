@@ -32,7 +32,7 @@ class AccessController < ApplicationController
   	if authorized_user
   		# mark user as logged in
       session[:user_id] = authorized_user.id
-      session[:user_level] = authorized_user.type
+      session[:user_type] = authorized_user.type
       flash[:notice] = 'you are now logged in'
       redirect_to(:action => 'index')
     else
